@@ -1,0 +1,88 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { FaFacebookMessenger, FaEnvelope, FaPhone, FaWhatsapp, FaMoneyBillWave } from "react-icons/fa";
+
+const Home = () => (
+  <section id="home" className="text-center py-20 bg-gray-100">
+    <h1 className="text-4xl font-bold">Professional Book Formatting Services</h1>
+    <p className="mt-4 text-lg">Get high-quality formatting for Paperback, eBook, Hardcover, and more.</p>
+    <Button className="mt-6">Get Started</Button>
+  </section>
+);
+
+const AboutPortfolioContact = () => (
+  <section id="about-portfolio-contact" className="py-20 grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto text-center border-t border-gray-300 pt-10">
+    <div>
+      <h2 className="text-3xl font-bold">About Me</h2>
+      <p className="mt-4 max-w-2xl mx-auto">I specialize in professional book formatting to help authors publish seamlessly.</p>
+    </div>
+    <div className="border-l border-gray-300 pl-10">
+      <h2 className="text-3xl font-bold">Portfolio</h2>
+      <p className="text-center mt-4">Showcase of formatted books will be added here.</p>
+    </div>
+    <div className="border-l border-gray-300 pl-10">
+      <h2 className="text-3xl font-bold">Contact</h2>
+      <p className="mt-4">Get in touch for your book formatting needs.</p>
+      <div className="flex justify-center gap-6 mt-6">
+        <Button><FaFacebookMessenger className="mr-2" /> Messenger</Button>
+        <Button><FaEnvelope className="mr-2" /> Email</Button>
+        <Button><FaPhone className="mr-2" /> Phone</Button>
+        <Button><FaWhatsapp className="mr-2" /> WhatsApp</Button>
+      </div>
+    </div>
+  </section>
+);
+
+const Services = () => (
+  <section id="services" className="py-20 bg-gray-100">
+    <h2 className="text-3xl font-bold text-center">Our Services</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 max-w-5xl mx-auto">
+      {["Paperback", "Hardcover", "eBook", "Print book", "ePub", "KPF", "Mobi", "Book Uploading", "PDF Fix", "Cover Fix", "Manuscript Fix", "Fix Font Embedding Issue", "Colour Profile Issues", "Fix Rejected Cover", "Fix Rejected Manuscript", "Solve IngramSpark Issue", "Solve Lulu Issue", "Solve Amazon KDP Issue", "Book Cover Design", "Paperback Cover Design", "Hardcover Design", "eBook Cover Design", "Logo Design", "Logo Design for Self-Publishers", "T-Shirt Design", "Business Card Design", "Visiting Card Design", "Flyer Design", "YouTube Theme Design", "File Conversion PDF/Word/PNG/JPEG"].map(service => (
+        <Card key={service} className="p-4 text-center">
+          <CardContent>{service}</CardContent>
+        </Card>
+      ))}
+    </div>
+  </section>
+);
+
+const ContactPayment = () => (
+  <section id="contact-payment" className="py-20 bg-gray-100">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto text-center border-t border-gray-300 pt-10">
+      <div>
+        <h2 className="text-3xl font-bold">Payment Options</h2>
+        <p className="mt-4">Choose your preferred payment method.</p>
+        <div className="flex justify-center gap-6 mt-6">
+          <Button><FaMoneyBillWave className="mr-2" /> Bank Transfer</Button>
+          <Button><FaMoneyBillWave className="mr-2" /> bKash</Button>
+          <Button><FaMoneyBillWave className="mr-2" /> Payoneer</Button>
+          <Button><FaMoneyBillWave className="mr-2" /> Western Union</Button>
+        </div>
+      </div>
+      <div className="border-l border-gray-300 pl-10">
+        <h2 className="text-3xl font-bold">Contact</h2>
+        <p className="mt-4">Get in touch for your book formatting needs.</p>
+        <div className="flex justify-center gap-6 mt-6">
+          <Button><FaFacebookMessenger className="mr-2" /> Messenger</Button>
+          <Button><FaEnvelope className="mr-2" /> Email</Button>
+          <Button><FaPhone className="mr-2" /> Phone</Button>
+          <Button><FaWhatsapp className="mr-2" /> WhatsApp</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const BookFormattingWebsite = () => {
+  return (
+    <div>
+      <Home />
+      <AboutPortfolioContact />
+      <Services />
+      <ContactPayment />
+    </div>
+  );
+};
+
+export default BookFormattingWebsite;
